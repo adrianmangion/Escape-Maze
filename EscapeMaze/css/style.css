@@ -1,0 +1,516 @@
+/* Globals */
+html
+{
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+}
+body
+{
+    background-image: url("../img/pw_maze_white_@2X.png");
+}
+
+#welcomeUser
+{
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(120deg, #042440, #8a25b1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 5px 5px 5px 5px;
+  position: relative;
+}
+
+.hidden
+{
+  display: none !important;
+  height: 0;
+  width: 0;
+}
+
+/* Header for each page*/
+.header
+{
+    font-weight: 1000;
+    font-size: 2.5rem;
+    background: linear-gradient(120deg, #042440, #8a25b1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Footer for each page */
+footer
+{
+    background: linear-gradient(120deg, #42075b, #042440);
+    border-top: 2px solid #65437c;
+    text-align: center;
+    color: #fae0ff;
+    bottom: 0;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+}
+
+/*CSS for Logo and Brand top left*/
+.logo
+{
+    width: 6em;
+    height: 6em;
+}
+
+.logo:hover
+{
+    opacity: 0.8;
+}
+
+/* Button Styling */
+.btn
+{
+    position: relative;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.8s all ease;
+    padding: 0.5em 0;
+    max-width: 10em;
+}
+
+.btn::before
+{
+    background: linear-gradient(120deg, #42075b, #042440);
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    transition: all 0.9s ease;
+}
+
+.btn::before
+{
+    width: 200%;
+    height: 0;
+    transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.btn:hover::before
+{
+    height: 400%;
+}
+
+.btn:focus::before
+{
+  height: 400%;
+}
+
+#button-placeholders
+{
+  text-align: -webkit-center;
+}
+
+
+/* Play as Guest Button */
+#GuestButton
+{
+    font-weight: 600;
+    border: 1px solid #65437c;
+}
+#GuestButton:hover, #submit:hover, #start-btn:hover, #ok-btn:hover, #dropdownMenuButton:hover, #dropdownMenuButton:focus, #practise:hover, #play:hover
+{
+    color: #fae0ff;
+    background-color: transparent;
+}
+
+/* Submit button */
+#submit
+{
+    display: inline-block;
+    font-weight: 600;
+    padding: 0.5em;
+    margin-top: 2em;
+    border: 1px solid #65437c;
+    background: linear-gradient(120deg, #042440, #8a25b1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Start game button */
+#start-btn, #practise, #play
+{
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 700;
+    padding: 0.5em;
+    border: 1px solid #65437c;
+    background: linear-gradient(120deg, #042440, #8a25b1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#ok-btn
+{
+    display: inline-block;
+    font-weight: 600;
+    background-color: #ffffffcb;
+    vertical-align: top;
+    padding: 0.5em;
+    border: 1px solid #65437c;
+    background: linear-gradient(120deg, #042440, #8a25b1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#dropdownMenuButton
+{
+  font-weight: 600;
+  padding: 0.5em;
+  border: 1px solid #65437c;
+  margin-right: 2em;
+  background: linear-gradient(120deg, #042440, #8a25b1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.dropdown-item:hover
+{
+  background:linear-gradient(120deg, #042440, #8a25b1);
+  border-radius: 8px;
+  color: #fae0ff;
+}
+
+/*CSS for Links in Navbar*/
+.active.nav-link::after
+{
+    left: 0%;
+    width: 100%;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: 600;
+    background: linear-gradient(120deg, #042440, #8a25b1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin: 5px 5px 5px 5px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #65437c;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    border-radius: 10px;
+    transition: all 500ms ease;
+    background: #9D50BB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #6E48AA, #9D50BB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #6E48AA, #9D50BB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.nav-link:hover::after{
+    left: 0%;
+    width: 100%;
+}
+
+/* Navbar */
+.navbar
+{
+    border-bottom: 2px solid #65437c;
+    width: 100%;
+}
+
+.navbar-nav
+{
+  margin: auto;
+}
+
+/* Container which holds main content of page */
+.container
+{
+    padding: 40px;
+    min-height: 50em;
+}
+
+/* Image of character */
+.character, .character-img
+{
+    height: 8em;
+    width: 8em;
+}
+
+/* Social Media Icons*/
+.fa {
+  padding: 6px;
+  width: 2em;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 60%;
+}
+
+.fa:hover {
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  color: white;
+}
+
+/*How To Play Page*/
+.game-description
+{
+    padding:2em;
+    text-align: justify;
+    font-weight: 500;
+}
+dl
+{
+    margin: 2em;
+}
+
+dt
+{
+    padding: 0.5em;
+    color: floralwhite;
+    background: linear-gradient(120deg, #42075b, #042440);
+}
+
+dd
+{
+    padding: 0.5em;
+    margin-bottom: 0;
+    background: white;
+}
+
+/*Highscores CSS*/
+table
+{
+        margin-top: 3em;
+}
+
+thead
+{
+     background: linear-gradient(120deg, #42075b, #042440);
+    color: floralwhite;
+}
+
+tbody
+{
+    background: white;
+}
+
+/*Registration*/
+.register-form{
+    background-clip: text;
+    border: 1px solid black;
+    padding: 2em;
+    border-radius: 10%;
+    background: linear-gradient(120deg, #042440, #8a25b1);
+    width: 25em;
+    text-align-last:justify;
+}
+
+label
+{
+    color: floralwhite;
+}
+
+#strength
+{
+    width: 100%;
+    background-color: rgb(170, 170, 170);
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #FFF;
+  }
+
+progress::-webkit-progress-value {
+    background: rgb(20, 230, 20)
+  }
+
+  #passStrength
+  {
+      color: floralwhite;
+      text-align-last: right;
+      margin-left: 6.2em;
+      margin-right: 6.2em;
+  }
+
+/* Login */
+.login-form{
+    background-clip: text;
+    border: 1px solid black;
+    padding: 2em;
+    border-radius: 5%;
+    background: linear-gradient(120deg, #042440, #8a25b1);
+    width: 25em;
+    text-align-last:justify;
+}
+  
+  /* Game Page */
+  #mazeContainer {
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    top: 75px;
+    opacity: 0;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: auto;
+  }
+  #mazeContainer #mazeCanvas {
+    margin: 0;
+    display: block;
+    border: solid 3px black;
+  }
+
+  #view
+  {
+    margin-bottom: 5em;
+    visibility: hidden;
+  }
+
+  #level, #score
+  {
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(92, 0, 128);
+  }
+
+  #level
+  {
+    text-align: -webkit-right;
+  }
+
+  #score
+  {
+    text-align: -webkit-left;
+  }
+
+select {
+  transition-property: background-color opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 45px;
+  width: 150px;
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+select:hover, .reg-input:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+select:active, .reg-input:active {
+  background-color: black;
+}
+
+select:focus, .reg-input:focus {
+  outline: none;
+}
+
+.custom-select {
+    display: inline-block;
+  }
+.custom-select select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: 75px center;
+  }
+
+  #page #menu {
+    margin: auto;
+    padding: 0.5em;
+    height: 65px;
+    box-sizing: border-box;
+  }
+  #page #menu h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 3.2rem;
+  }
+
+  #menu
+  {
+    margin-bottom: 1em;
+    visibility: hidden;
+  }
+
+  #startMenu
+  {
+    margin-bottom: 2em;
+  }
+
+  #Message-Container {
+    visibility: hidden;
+    color: white;
+    display: block;
+    width: 25vw;
+    height: 20vh;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid #65437c;
+    z-index: 1;
+  }
+  #Message-Container #message {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .reg-input
+  {
+    transition-property: background-color opacity;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 45px;
+    width: 150px;
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    color: floralwhite;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+  }
+
